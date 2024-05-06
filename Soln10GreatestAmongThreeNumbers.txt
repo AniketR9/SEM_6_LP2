@@ -1,0 +1,25 @@
+public class GreatestNumbers {
+    public void greatest(integer x, integer y, integer z){
+        if( x==0 && y==0 && z==0){
+            System.debug('Please enter non-zero values for comparison');
+        }
+        else{
+            if(x==y && y==z){
+                System.debug('All three numbers are equal');
+            }
+            else{
+                if (x>y && x>z){
+                    System.debug(x+' is the greatest of all 3 integers');
+                }
+                else{
+                    if (y>x && y>z){
+                        System.debug(y + 'is the greatest of all integers');
+                    }
+                    else{
+                        System.debug(z + 'is the greatest of all integers');
+                    }
+                }
+            }
+        }
+    }
+}

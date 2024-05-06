@@ -1,0 +1,27 @@
+public class CurrencyConverter {
+    public Double convert(Double amount, String fromCurrency, String toCurrency){
+        Double convAmt=0.0;
+        Map<String, Double>ConversionRate=new Map<String, Double>{
+            'USD-INR'=>74.23,
+            'USD-GBP'=>0.72,
+            'USD-EUR'=>0.82,
+            'INR-GBP'=>0.0096,
+            'INR-USD'=>0.013,
+            'INR-EUR'=>0.011,
+            'GBP-USD'=>1.34,
+            'GBP-EUR'=>1.12,
+            'GBP-INR'=>103.69,
+            'EUR-USD' => 1.22,
+            'EUR-GBP' => 0.88,
+            'EUR-INR' => 88.14   
+        };
+        String rateKey=fromCurrency+'-'+toCurrency;
+        if(ConversionRate.containsKey(rateKey)){
+            convAmt=amount*ConversionRate.get(rateKey);
+        }
+        else{
+            System.debug('Conversion rate not available for '+rateKey);
+        }
+        return convAmt;
+    }
+}

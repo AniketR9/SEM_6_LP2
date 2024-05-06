@@ -1,0 +1,24 @@
+public class E_Bill {
+    public void billcal(Integer units){
+        Double bill=0.0;
+        if(units<=50){
+            bill=units*2;
+        }
+        else if(units<=100){
+            bill=(units-50)*2.5+50*2;
+        }
+        else if (units<=150){
+            bill=(units-100)*3.5+50*2.5+50*2;
+        }
+        else if (units<=250){
+            bill=(units-150)*3.75+ 50*3.5+ 50*2.5+50*2;
+        }
+        else if(units<=500){
+            bill=(units-250)*4.25+100*3.75+ 50*3.5+ 50*2.5+50*2;
+        }
+        else{
+            bill=(units-500)*6+250*4.25+100*3.75+ 50*3.5+ 50*2.5+50*2;
+        }
+        System.debug('The total electricity bill generated for the month is:'+ bill);
+    }
+}

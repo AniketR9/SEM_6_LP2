@@ -1,0 +1,40 @@
+public class Marksheet {
+    public void marks(Integer dsbda, Integer wt, Integer ai, Integer cc){
+        Integer sum=dsbda+wt+ai+cc;
+        Double pc=sum/4;
+        String grade=evaluate(pc);
+        display(dsbda,wt,ai,cc,sum,pc,grade);
+    }
+    
+    public String evaluate(Double per){
+        String g;
+        if(per>=90){
+            g='O';
+        }
+        else if(per>=80){
+            g='A+';
+        }
+        else if(per>=70){
+            g='A';
+        }
+        else if(per>=60){
+            g='B';
+        }
+        else if(per>=40){
+            g='C';
+        }
+        else{
+            g='F';
+        }
+        return g;
+    }
+    
+    public void display(Integer dsbda, Integer wt, Integer ai, Integer cc, Integer total, Double per, String g){
+        System.debug('Marks obtained in DSBDA: '+dsbda);
+        System.debug('Marks obtained in WT: '+wt);
+        System.debug('Marks obtained in AI: '+ai);
+        System.debug('Marks obtained in CC: '+cc);
+        System.debug('Total marks obtained:'+total);
+        System.debug('Grade Obtained:'+g);
+    }
+}

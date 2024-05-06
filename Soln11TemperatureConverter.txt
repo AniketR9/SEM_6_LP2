@@ -1,0 +1,6 @@
+public class TempConv {
+    public Double conv(Decimal cel){
+        Double far=((cel/5)*9)+32;
+        return far;
+    }
+}

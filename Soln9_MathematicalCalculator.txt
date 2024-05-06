@@ -1,0 +1,42 @@
+public class Calc {
+    public void add(Integer x, Integer y){
+        Integer ans= x+y;
+        System.debug('The result of the addition operation is:'+ans);
+    }
+    
+    public void sub(Integer x, Integer y){
+        Integer ans= x-y;
+        Integer mod_ans= Math.abs(ans);
+        System.debug(' The result of the subtraction operation is:'+ans);
+    }
+    
+    public void mul(Integer x, Integer y){
+        Long ans=x*y;
+        System.debug(' The result of the multiplication operation is:'+ ans);
+    }
+    
+    public void div(Integer x, Integer y){
+        Double ans= x/(y*1.0);
+        System.debug(' The result of the Division operation is:'+ ans);
+    }
+    
+    public void power(Integer x, Integer y){
+        Long ans=(Long)Math.pow(x,y);
+        System.debug('The answer of the power operation is:'+ ans);
+    }
+    
+    public void mod(Integer x, Integer y){
+        Integer ans=Math.mod(x,y);
+        System.debug('The answer to the modulus operation is:'+ans);   
+    }
+    
+    public void Square(Integer x){
+        Integer ans=x*x;
+        System.debug('The square of '+x+'is: '+ans);
+    }
+    
+    public void sqroot(Integer x){
+        Double ans= Math.sqrt(x);
+        System.debug('The squareroot of '+x+' is '+ans);
+    }
+}
