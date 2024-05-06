@@ -98,7 +98,7 @@ class Graph{
         q.push(start);
         visited[start] = 1;
         level[0].push_back(start);
-        bfs_rec(q, visited, level);
+        bfs_rec(q, visited, level,ans);
         for(auto i:ans){
             {cout<<i<<" ";}
         }
